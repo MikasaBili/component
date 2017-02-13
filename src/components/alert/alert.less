@@ -1,0 +1,107 @@
+@import "../style/color";
+@import "../style/reset.css";
+//主体
+.x-alert {
+  display: flex;
+  align-items: center;
+  padding:8px 6px;
+  border-radius: 4px;
+}
+
+//theme 
+.x-alert-default {
+  border: 1px solid @blue;
+  background: @blue;
+}
+.x-alert-success {
+  border: 1px solid @green;
+  background: @green;
+}
+.x-alert-warning {
+  border: 1px solid @orange;
+  background: @orange;
+}
+.x-alert-danger {
+  border: 1px solid @red;
+  background: @red;
+}
+//左侧
+.x-main-left {
+  padding:0 6px;
+  .x-alert-icon-default {
+    font-size: 18px;
+    color: @white;
+    &:before {
+      content: "\e611";
+    }
+  }
+  .x-alert-icon-success {
+    font-size: 18px;
+    color: @white;
+    &:before {
+      content: "\e608";
+    }
+  }
+  .x-alert-icon-warning {
+    font-size: 18px;
+    color: @white;
+    &:before {
+      content: "\e620";
+    }
+  }
+  .x-alert-icon-danger {
+    font-size: 18px;
+    color: @white;
+    &:before {
+      content: "\e605";
+    }
+  }
+  .x-alert-icon-size {
+    font-size: 24px;
+  }
+}
+
+//中间
+.x-main-center {
+  flex-grow: 1;
+  .x-alert-title {
+    display: block;
+    color: @white;
+  }
+  .x-alert-title-blod{
+    font-weight: 700;
+    font-size: 16px;
+  }
+  .x-alert-content {
+    padding-top: 5px;
+    font-size: 14px;
+    display: block;
+    color: @white;
+  }
+}
+
+//右侧
+.x-main-right {
+  .x-alert-close {
+    color: @gray;
+    padding:0 6px;
+    cursor: pointer;
+    &:before {
+      content: "\e616";
+    }
+  }
+  .x-alert-closetext {
+    color: @white;
+    padding:0 6px;
+    display: block;
+    cursor: pointer;
+  }
+}
+
+//关闭效果
+.xalert-enter-active, .xalert-leave-active {
+  transition: opacity .5s
+}
+.xalert-enter, .xalert-leave-active {
+  opacity: 0
+}

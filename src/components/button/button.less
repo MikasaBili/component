@@ -1,0 +1,139 @@
+@import "../style/color";
+@import "../font/iconfont.css";
+//按钮基本样式
+.x-button {
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  text-align: center;
+  line-height: 1;
+  // transition: background 0.5s;
+}
+
+//按钮大小
+.x-button-sm {
+  padding: 4px 8px;
+  font-size: 14px;
+  border-radius: 3px;
+}
+.x-button-md {
+  padding:6px 12px;
+  font-size: 16px;
+  border-radius: 4px;
+}
+.x-button-lg {
+  padding:8px 16px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+//按钮主题
+.x-button-default {
+  background: @blue;
+  border:1px solid @blue;
+  color:@white;
+  &:hover {
+    background: @thin-blue;
+    border: 1px solid @thin-blue;
+  }
+}
+.x-button-warning {
+  background: @orange;
+  border: 1px solid @orange;
+  color: @white;
+  &:hover {
+    background: @thin-orange;
+    border:1px solid @thin-orange;
+  }
+}
+.x-button-success {
+  background: @green;
+  border: 1px solid @green;
+  color: @white;
+  &:hover {
+    background: @thin-green;
+    border: 1px solid @thin-green;
+  }
+}
+.x-button-danger {
+  background: @red;
+  border:1px solid @red;
+  color: @white;
+  &:hover {
+    background: @thin-red;
+    border: 1px solid @thin-red;
+  }
+}
+
+//禁用
+.isdisabled {
+  cursor: not-allowed;
+  border: 1px solid @gray;
+  background: @gray;
+  &:hover {
+    border: 1px solid @gray;
+    background: @gray;
+  }
+}
+
+//镂空按钮
+.isempty.x-button-danger {
+  background: @white;
+  color: @red;
+  &:hover {
+    background: @white;
+  }
+}
+
+.isempty.x-button-success {
+  background: @white;
+  color: @green;
+  &:hover {
+    background: @white;
+  }
+} 
+
+.isempty.x-button-warning {
+  background: @white;
+  color: @orange;
+  &:hover {
+    background: @white;
+  }
+} 
+
+.isempty.x-button-default {
+  background: @white;
+  color: @blue;
+  &:hover {
+    background: @white;
+  }
+}
+
+//loader
+.x-loader {
+  animation: loading 1s linear infinite;
+  display: inline-block;
+  font-family:"iconfont" !important;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  top:-2px;
+}
+
+.x-loader:before {
+  content: "\e74e";
+}
+
+@keyframes loading{
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform-origin:50% 50%;
+    transform: rotate(0deg);
+  }
+  100% {
+    transform-origin:50% 50%;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
