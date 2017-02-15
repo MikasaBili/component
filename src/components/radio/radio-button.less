@@ -1,0 +1,52 @@
+@import "../style/color";
+@import "../style/reset.css";
+
+//button
+.x-radio-button {
+  font-size: 14px;
+  margin-right: -1px;
+  padding:5px 10px;
+  border: 1px solid @blue;
+  cursor: pointer;
+  color: @black;
+  transition: color 0.2s;
+  &:hover {
+    color:@blue;
+    transition: color 0.2s;
+  }
+  &:first-child {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+  &:last-child {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+}
+
+.x-radio-button-check {
+  background: @blue;
+  color: @white;
+  &:hover {
+    color:@white;
+  }
+}
+//原生input隐藏
+
+.x-radio-button-none {
+    z-index: -1;
+    opacity: 0;
+    position: absolute;
+    left: -1000px;
+}
+
+//disabled
+.x-radui-button-disable {
+  cursor: not-allowed;
+  background: @gray;
+  border: 1px solid @light-default;
+  color: @light-default;
+  &:hover {
+    color: @light-default;
+  }
+}

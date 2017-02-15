@@ -1,0 +1,70 @@
+@import "../style/color";
+@import "../style/reset.css";
+
+.x-labelRadio {
+  position: relative;
+  display: inline-block;
+}
+
+//radio 主体
+.x-radio {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  //代替原生input样式
+  .x-radio-input {
+    overflow: hidden;
+    width:18px;
+    height: 18px;
+    border: 1px solid @blue;
+    border-radius: 50%;
+    display: block;
+    position: relative;
+    &:before {
+      content: " ";
+      width: 6px;
+      height: 6px;
+      border: 1px solid @white;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      top:50%;
+      transform: translate(-50%,-50%) scale(0);
+      transition: transform 1s;
+      background: @white;
+    }
+  }
+  //原生样式隐藏
+  .x-radio-none {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+    }
+}
+
+//disabled
+.isDisabled {
+  cursor: not-allowed;
+  .x-radio-input,.x-label-content {
+    color: @gray;
+    border-color: @gray;
+  }
+  .x-radio-check .x-radio-input {
+    background: @light-default;
+  }
+}
+//选中的背景变蓝
+.x-radio-check .x-radio-input {
+  background: @blue;
+  &:before {
+    transform: translate(-50%,-50%) scale(1);
+  }
+}
+
+
+.x-label-content {
+  font-size: 14px;
+  vertical-align: middle;
+}
