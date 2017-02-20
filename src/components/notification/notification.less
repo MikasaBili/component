@@ -1,0 +1,44 @@
+@import "../style/color";
+@import "../style/reset.css";
+
+.x-notification{
+  position: fixed;
+  padding:10px 10px;
+  width: 250px;
+  top: 10px;
+  right: 10px;
+  border-radius: 5px;
+  transition: opacity .3s,transform .3s,right .3s,top .3s;
+  //icon
+  .x-notification-icon {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: @white;
+    padding:0 6px;
+    cursor: pointer;
+    &:before {
+      content: "\e616";
+    }
+  }
+}
+
+//type
+.x-notification-type-success {
+  color: @white;
+  border: 1px solid fade(@green,90%);
+  background: fade(@green,90%);
+}
+
+//效果
+.notification-fade-enter {
+    transform: translateX(100%);
+    right: 0px;
+}
+
+.notification-fade-leave-active {
+    transform: translateX(100%);
+    opacity: 0
+}
+

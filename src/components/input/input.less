@@ -1,0 +1,58 @@
+@import "../style/color";
+@import "../style/reset.css";
+
+// input-group 
+
+.x-input-new {
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  line-height: 1;
+  height: 35px;
+  border: 1px solid @default;
+  outline: none;
+  &:hover {
+    border-color: @dark-default;
+  }
+  &:focus {
+    border-color: @blue;
+  }
+}
+
+//size 
+.x-input-size-sm {
+  font-size: 12px;
+  padding:2px 6px;
+  border-radius: 3px;
+}
+.x-input-size-md {
+  font-size: 14px;
+  padding:5px 10px;
+  border-radius: 3px;
+}
+.x-input-size-lg {
+  font-size: 16px;
+  padding:6px 10px;
+  border-radius: 4px;
+}
+
+// :disabled
+.x-input-disabled {
+  border-color: @light-default;
+  background: @light-gray;
+  cursor: no-drop;
+  &:hover {
+    border-color: @light-default;
+  }
+}
+
+// readonly
+.x-input-readonly {
+  background: @readonly;
+  &:hover {
+    border: 1px solid @default;
+  }
+  &:focus {
+    border: 1px solid @default;
+  }
+}
